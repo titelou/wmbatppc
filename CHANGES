@@ -1,0 +1,18 @@
+wmbatppc 
+Homepage: http://titelou.free.fr/wmbatppc
+
+Changes :
+=============
+
+24/11/2000
+Version 0.2 : wonderful "jukebox" with plenty of colors ! :-))
+the color of the half circle reflects battery usage (=> disk & CPU activity). 
+
+18/11/2000
+Version 0.1.1 : corrections in command help.
+
+16/11/2000
+Version 0.1 : first beta version of wmbatppc.
+works on G3 powerbooks & ibooks, with 1 or 2 batteries, for windowmaker
+or afterstep but may be also used in others wm.
+

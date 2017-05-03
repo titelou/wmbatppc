@@ -1,0 +1,30 @@
+%define version 0.2
+Summary: Battery monitor for Apple laptops
+Name: wmbatppc
+Version: %{version}
+Release: 1 
+Copyright: DMDZZ / GPL 
+Group: Applications/System
+Source: %name-%{version}.tar.gz
+BuildRoot: /usr/src/rpm/BUILD/%name-%version
+Packager: Lou <titelou@free.fr>
+Obsoletes: wmbatppc
+Requires: pmud
+
+%description
+A battery monitor for Apple G3 ibooks/powerbooks, using Linux PPC
+%prep
+%setup
+%build
+make
+%install
+strip wmbatppc
+echo $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT/usr/local/bin
+install -m 755 -o root -g root wmbatppc $RPM_BUILD_ROOT/usr/local/bin
+mkdir -p $RPM_BUILD_ROOT/usr/man/man1
+install -m 644 -o root -g root wmbatppc.1 $RPM_BUILD_ROOT/usr/local/man/man1
+%files
+%doc COPYING README 
+/usr/local/bin/*
+/usr/local/man/man1/*
